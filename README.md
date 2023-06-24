@@ -7,6 +7,7 @@ So basically it extracts subtitles from the video and previews it with the subt
 5. In `view_video` it shows the output video with the subtitle and there is a search box where you can search words and get the time stamp form
 dynamodb.
 
-![sub-ext main drawio](https://github.com/AbdurRohit/Subtitle-extractor/assets/96853180/b86481b3-8018-41b9-b507-c0ecea8ff7c9)
+
+![sub-ext main drawio](https://github.com/AbdurRohit/subtitle-extractor-aws/assets/96853180/c045b3c7-0602-4ae5-99e7-6115fadb4d32)
 
 
