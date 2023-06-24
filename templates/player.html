@@ -1,0 +1,12 @@
+<html>
+<head>
+  <title>Video player</title>
+</head>
+<body>
+  yeeeeee
+  <video width="640" height="480" controls> {% csrf_token %}
+  <source src="{{ videourl }}"  type="video/mp4">
+  Your browser does not support the video tag.
+  <track kind="subtitles" label="English" kind="subtitles" srclang="en" src="{{ sub }}" default>
+</body>
+</html>

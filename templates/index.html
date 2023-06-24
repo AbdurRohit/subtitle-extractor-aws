@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video subtitles software</title>
+    <link rel="stylesheet" href="../static/indexstyle.css" >
+  <style>
+
+body{
+    font-family: consolas;
+}
+#st{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #ffd607;
+
+}
+button{
+    margin: 10px;
+    padding: 10px;
+   
+}
+table{
+  padding-bottom: 50px;  
+  border-radius: 1px;
+  justify-content: center;
+
+}
+  </style>
+</head>
+<body>
+    <div id="st">
+    
+    <form action="/extract_subtitles/" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+    {{ form }} 
+    <h1>Upload a video</h1>
+    <label for="myfile">Select a file:</label>
+    <input type="file" id="myfile" name="video"><br><br>
+    <button type="submit">Upload</button>
+
+  </form>
+ 
+  </div>    
+</body>
+</html>

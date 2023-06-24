@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="..\static\indexstyle.css" >
+    <style>
+
+        body{
+            font-family: consolas;
+        }
+        #st{
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            background-color: #ffd607;
+        
+        }
+        button{
+            margin: 10px;
+            padding: 10px;
+           
+        }
+        table{
+          padding-bottom: 50px;  
+          border-radius: 1px;
+          justify-content: center;
+        
+        }
+          </style>
+</head>
+<body>
+    <div id="st">
+
+        <video controls>
+            <source src="{{ video_file }}" type="video/mp4">
+            <track
+            label="English"
+            kind="subtitles"
+            srclang="en"
+            src="{{ sub }}"
+            default />
+            Your browser does not support the video tag.
+        </video>
+        <p><h2>For demo use: YEAH.</h2></p>
+        <form action="/view_video/" method="post"enctype="multipart/form-data"> 
+            {% csrf_token %}
+            <input type="search" id="searchbar" name="search">
+            
+            <button type="submit">search</button>    
+        </form>
+
+        <table border="1">
+        <h2>Output:</h2>
+
+       <tr> <th>Records</th> </tr>
+        {% for items in results %}
+        <tr><td>{{ items }}</td></tr>
+        {% endfor %}  
+        </table>
+        
+    </div>
+</body>
+</html>
