@@ -1,13 +1,60 @@
-# Subtitle-extractor-amazon aws
-So basically it extracts subtitles from the video and previews it with the subtitle, but there is more to it, 
-1. It takes the video file and stores it locally and extracts the subtitle. 
-2. It stores the video to a **AWS S3 bucket** along with the subtitles.
-3. The subtitles are sent to **dynamodb** as well (in JSON format). 
-4. It generates a pre-signed URL for the video and the subtitle and redirects to the `view_video` page.
-5. In `view_video` it shows the output video with the subtitle and there is a search box where you can search words and get the time stamp form
-dynamodb.
+# Subtitle Extractor with AWS
 
+Subtitle Extractor with AWS is a tool that extracts subtitles from videos, stores them locally, uploads the video and subtitles to an AWS S3 bucket, sends the subtitles to DynamoDB in JSON format, generates pre-signed URLs for video and subtitles, and redirects to the `view_video` page.
 
-![sub-ext main drawio](https://github.com/AbdurRohit/subtitle-extractor-aws/assets/96853180/c045b3c7-0602-4ae5-99e7-6115fadb4d32)
+## Overview
 
+The repository includes the following components:
+
+1. **Subtitle Extraction and Storage:**
+   - Takes a video file, extracts subtitles, and stores the video locally.
+   
+2. **AWS Integration:**
+   - Uploads the video and subtitles to an AWS S3 bucket.
+   
+3. **DynamoDB Integration:**
+   - Sends subtitles to DynamoDB in JSON format.
+   
+4. **Pre-signed URL Generation:**
+   - Generates pre-signed URLs for the video and subtitles.
+
+5. **View Video Page:**
+   - Displays the output video with subtitles.
+   - Includes a search box to search for words and retrieve timestamps from DynamoDB.
+
+## Project Structure
+
+The project is structured as follows:
+
+```plaintext
+subtitle-extractor-aws/
+│
+├── assets/
+│   └── 96853180/
+│       └── c045b3c7-0602-4ae5-99e7-6115fadb4d32
+│           └── sub-ext-main-drawio.png
+│
+├── src/
+│   ├── extraction_script.py
+│   └── view_video.py
+│
+├── templates/
+│   └── view_video.html
+│
+├── README.md
+├── requirements.txt
+└── .gitignore
+```
+## Clone the repository:
+``git clone https://github.com/AbdurRohit/subtitle-extractor-aws.git
+cd subtitle-extractor-aws``
+
+## Install dependencies:
+``pip install -r requirements.txt``
+## Visit the view_video page:
+
+## Run the extraction script:
+``python src/extraction_script.py``
+
+``python src/view_video.py``
 
