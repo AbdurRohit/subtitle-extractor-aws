@@ -46,15 +46,15 @@ subtitle-extractor-aws/
 └── .gitignore
 ```
 ## Clone the repository:
-``git clone https://github.com/AbdurRohit/subtitle-extractor-aws.git
-cd subtitle-extractor-aws``
+```git clone https://github.com/AbdurRohit/subtitle-extractor-aws.git```
+```cd subtitle-extractor-aws```
 
 ## Install dependencies:
-``pip install -r requirements.txt``
+```pip install -r requirements.txt```
 ## Visit the view_video page:
-
+```python src/view_video.py```
 ## Run the extraction script:
-``python src/extraction_script.py``
-
-``python src/view_video.py``
+```python src/extraction_script.py```
+## Visit the view_video page:
+```python src/view_video.py```
 
